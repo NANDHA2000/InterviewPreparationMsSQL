@@ -1,0 +1,23 @@
+# Ignore SQL Server DACPAC and BACPAC files
+*.dacpac
+*.bacpac
+
+# Ignore SQL Server build and intermediate files
+*.dbmdl
+*.jfm
+*.pfx
+*.publish.xml
+
+# Ignore SQL Server project bin and obj folders
+bin/
+obj/
+
+# Ignore Visual Studio User-Specific Files
+.vs/
+*.user
+*.suo
+
+# Ignore temporary files
+*.tmp
+*.log
+
