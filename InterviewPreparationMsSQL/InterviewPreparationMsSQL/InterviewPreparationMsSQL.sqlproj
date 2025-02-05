@@ -59,13 +59,23 @@
     <Folder Include="dbo\" />
     <Folder Include="dbo\Tables\" />
     <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="dbo\Views\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\student.sql" />
     <Build Include="dbo\Tables\Sales.sql" />
     <Build Include="dbo\Tables\Employees.sql" />
-    <Build Include="dbo\Stored Procedures\InnerJoin.sql" />
-    <Build Include="dbo\Stored Procedures\DeleteDuplicateSales.sql" />
-    <Build Include="dbo\Stored Procedures\CorrelatedSubquery.sql" />
+    <Build Include="dbo\Tables\Departments.sql" />
+    <Build Include="dbo\Tables\Salary.sql" />
+    <Build Include="dbo\Tables\Position.sql" />
+    <Build Include="dbo\Views\vw_FindManagerFromSameEmployee.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Tranaction.sql" />
+    <Build Include="dbo\Stored Procedures\sp_InnerJoin.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetAllJoins.sql" />
+    <Build Include="dbo\Stored Procedures\sp_FindSecondHighestSalary.sql" />
+    <Build Include="dbo\Stored Procedures\sp_DeleteDuplicateSales.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Cursors.sql" />
+    <Build Include="dbo\Stored Procedures\sp_CorrelatedSubquery.sql" />
+    <Build Include="dbo\Stored Procedures\sp_CommonTableExpressionCTE.sql" />
   </ItemGroup>
 </Project>
