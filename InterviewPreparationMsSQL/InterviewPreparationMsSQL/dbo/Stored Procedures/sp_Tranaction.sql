@@ -1,29 +1,54 @@
-﻿CREATE PROCEDURE sp_Tranaction  
-AS  
-BEGIN  
+﻿/* sp_Tranaction */  
   
-BEGIN TRANSACTION;  
-  
-BEGIN TRY  
+/***********************************************************  
+**--Practicing Standard Procedure v1.0--  
+** Name:   sp_Tranaction  
+** Author: Nandhakumar A
+** Description:  Basic code for Transaction
+**   
+**   
+** Inputs:  
+**   
+**   
+**   
+** Outputs:  
+**   
 
-   /* -- Insert a new employee */ 
-    INSERT INTO Employees (EmployeeID, EmployeeName, DepartmentID)  
-    VALUES (5, 'Alice Brown', 999);  
+** Revision History  
+**            
+** Date   Author     Version  Changes  
+** --------------------------------------------  
+** 05/02/2025 Nandhakumar A   1.0   Initial  
+**===========================================  
   
-    /*-- Assign the employee to an existing department  */
-    UPDATE Departments  
-    SET DepartmentName = 'HR'   
-    WHERE DepartmentID = 102;  
   
-    /*-- Commit the transaction if both operations succeed  */
-    COMMIT TRANSACTION;  
-END TRY  
-BEGIN CATCH  
-    /* -- Rollback the transaction if there is an error  */
-    ROLLBACK TRANSACTION;  
+**********************************************************/  
+CREATE   PROCEDURE sp_Tranaction    
+AS    
+BEGIN    
+    
+BEGIN TRANSACTION;    
+    
+BEGIN TRY    
   
-    /* -- Print the error message  */
-    PRINT ERROR_MESSAGE();  
-END CATCH;  
-  
+   /* -- Insert a new employee */   
+    INSERT INTO Employees (EmployeeID, EmployeeName, DepartmentID)    
+    VALUES (5, 'Alice Brown', 999);    
+    
+    /*-- Assign the employee to an existing department  */  
+    UPDATE Departments    
+    SET DepartmentName = 'HR'     
+    WHERE DepartmentID = 102;    
+    
+    /*-- Commit the transaction if both operations succeed  */  
+    COMMIT TRANSACTION;    
+END TRY    
+BEGIN CATCH    
+    /* -- Rollback the transaction if there is an error  */  
+    ROLLBACK TRANSACTION;    
+    
+    /* -- Print the error message  */  
+    PRINT ERROR_MESSAGE();    
+END CATCH;    
+    
 END;
